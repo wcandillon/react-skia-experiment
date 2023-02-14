@@ -2,16 +2,21 @@ import React from "react";
 import type { SkiaValue } from "@shopify/react-native-skia";
 import {
   BlurMask,
-  Easing,
   Group,
-  useLoop,
-  useComputedValue,
-  vec,
   Circle,
   Fill,
   polar2Canvas,
   mix,
-} from "@shopify/react-native-skia";
+} from "@shopify/react-native-skia/lib/commonjs/renderer";
+
+ import {
+  useComputedValue,
+} from "@shopify/react-native-skia/lib/commonjs/values";
+import {
+ useLoop,
+ Easing,
+} from "@shopify/react-native-skia/lib/commonjs/animation";
+
 
 const c1 = "#61bea2";
 const c2 = "#529ca0";
@@ -25,8 +30,7 @@ interface RingProps {
 
 export const Ring = ({ index, progress, width, height }: RingProps) => {
   const R = width / 4;
-  const center = vec(width / 2, height / 2 - 64);
-
+  const center = { x: width / 2, y: height / 2 - 64 };
   const theta = (index * (2 * Math.PI)) / 6;
   const transform = useComputedValue(() => {
     const { x, y } = polar2Canvas(
@@ -54,8 +58,7 @@ interface BreatheProps {
 }
 
 export const Breathe = ({ width, height }: BreatheProps) => {
-  console.log({ width, height });
-  const center = vec(width / 2, height / 2 - 64);
+  const center = { x: width / 2, y: height / 2 - 64 };
   const progress = useLoop({
     duration: 3000,
     easing: Easing.inOut(Easing.ease),
