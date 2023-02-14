@@ -5,5 +5,8 @@
   "license": "MIT",
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "scripts": {
+    "postinstall": "cp scripts/react_native_pods.rb node_modules/react-native/scripts/react_native_pods.rb && cd packages/mobile/ios && pod install"
+  }
 }
