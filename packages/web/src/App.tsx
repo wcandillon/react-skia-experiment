@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Breathe } from '@example-app/shared';
-import {Canvas} from "@shopify/react-native-skia/lib/module/dom";
+import {Canvas} from "@shopify/react-native-skia";
 
 const width = window.innerWidth;
 const height = window.innerHeight;

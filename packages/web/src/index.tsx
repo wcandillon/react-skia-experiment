@@ -14,9 +14,7 @@ LoadSkiaWeb({
   );
   const App = (await import("./App")).default;
   root.render(
-    <React.StrictMode>
       <App />
-    </React.StrictMode>
   );
 });
 

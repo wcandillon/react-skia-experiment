@@ -8,7 +8,7 @@
   "watch": "tsc --watch"
  },
  "dependencies": {
-  "@shopify/react-native-skia": "https://firebasestorage.googleapis.com/v0/b/start-react-native.appspot.com/o/miscs%2Fshopify-react-native-skia-0.1.174.tgz?alt=media&token=8dcd72fc-fd6d-471b-ac4c-0835a0a144ac",
+  "@shopify/react-native-skia": "0.1.190",
   "react": "18.0.0"
  },
  "devDependencies": {
