@@ -1,7 +1,8 @@
 # React Skia
 
 **Now this is the default in React Native Skia**
-https://shopify.github.io/react-native-skia/docs/getting-started/web
+
+See: https://shopify.github.io/react-native-skia/docs/getting-started/web
 
 Universal React Skia
 
